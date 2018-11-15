@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/DefaultDocumentSettingsExample/Form1.cs) (VB: [Form1.vb](./VB/DefaultDocumentSettingsExample/Form1.vb))
+* [Program.cs](./CS/DefaultDocumentSettingsExample/Program.cs) (VB: [Program.vb](./VB/DefaultDocumentSettingsExample/Program.vb))
+<!-- default file list end -->
 # How to specify default document formatting
 
 
