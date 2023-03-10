@@ -1,27 +1,22 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Threading.Tasks
+Imports System
 Imports System.Windows.Forms
 
 Namespace DefaultDocumentSettingsExample
-    Friend NotInheritable Class Program
 
-        Private Sub New()
-        End Sub
+    Friend Module Program
 
         ''' <summary>
         ''' The main entry point for the application.
         ''' </summary>
-        #Region "#main"
-        <STAThread> _
-        Shared Sub Main()
-            Application.EnableVisualStyles()
+        <STAThread>
+#Region "#main"
+        Sub Main()
+            Call Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
             DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontSize = 8
             DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontName = "Tahoma"
-            Application.Run(New Form1())
+            Call Application.Run(New Form1())
         End Sub
-        #End Region ' #main
-    End Class
+#End Region  ' #main
+    End Module
 End Namespace
