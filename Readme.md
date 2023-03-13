@@ -14,10 +14,11 @@ The **New Document** button executes the [CreateNewDocument](https://docs.devexp
 
 The **Show New Editor** button invokes the other RichEditControl instance that uses default settings specified by the [RichEditControlCompatibility.DefaultFontName](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontName) and [RichEditControlCompatibility.DefaultFontSize](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontSize) properties on application startup.
 
->[!warning]
-> Starting with v19.2, the **RichEditControl** uses document themes to retrieve default document font information. As such, the **RichEditControlCompatibility.DefaultFontName** property will no longer affect the default document font.
+> **Warning**
 >
-> Set the [RichEditControlCompatibility.UseThemeFonts](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditControlCompatibility.UseThemeFonts) property to **false** when starting the application to restore the previous behavior in all instances of the RichEdit components. Set the [RichEditBehaviorOptions.UseThemeFonts](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditBehaviorOptions.UseThemeFonts) property to **false** before loading a new document to disable themes for a specific component.
+> Starting with v19.2, the `RichEditControl` uses document themes to retrieve default document font information. As such, the `RichEditControlCompatibility.DefaultFontName` property will no longer affect the default document font.
+>
+> Set the [RichEditControlCompatibility.UseThemeFonts](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditControlCompatibility.UseThemeFonts) property to `false` when starting the application to restore the previous behavior in all instances of the RichEdit components. Set the [RichEditBehaviorOptions.UseThemeFonts](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditBehaviorOptions.UseThemeFonts) property to `false` before loading a new document to disable themes for a specific component.
 
 The **Load Text Document** button loads a document to both RichEditControl instances. As a result, the document has different format options in each instance.
 
