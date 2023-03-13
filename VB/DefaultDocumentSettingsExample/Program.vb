@@ -13,15 +13,14 @@ Namespace DefaultDocumentSettingsExample
         ''' <summary>
         ''' The main entry point for the application.
         ''' </summary>
-        #Region "#main"
-        <STAThread> _
+        <STAThread>
         Shared Sub Main()
             Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
+            DevExpress.XtraRichEdit.RichEditControlCompatibility.UseThemeFonts = False
             DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontSize = 8
             DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontName = "Tahoma"
             Application.Run(New Form1())
         End Sub
-        #End Region ' #main
     End Class
 End Namespace

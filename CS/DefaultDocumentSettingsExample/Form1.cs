@@ -1,12 +1,17 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraRichEdit;
+using DevExpress.XtraRichEdit.API.Native;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 
-namespace DefaultDocumentSettingsExample {
-    public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm {
+namespace DefaultDocumentSettingsExample
+{
+    public partial class Form1 : RibbonForm
+    {
 
         public Form1() {
             InitializeComponent();
@@ -15,33 +20,29 @@ namespace DefaultDocumentSettingsExample {
             richEditControl1.DocumentLoaded += RichEditControl1_DocumentLoaded;
         }
 
-        #region #DocumentLoaded
         private void RichEditControl1_DocumentLoaded(object sender, EventArgs e) {
-            richEditControl1.Document.DefaultCharacterProperties.FontName = "Arial";
-            richEditControl1.Document.DefaultCharacterProperties.FontSize = 16;
+            Document document = richEditControl1.Document;
+            document.DefaultCharacterProperties.FontName = "Arial";
+            document.DefaultCharacterProperties.FontSize = 16;
         }
-        #endregion #DocumentLoaded
 
-        #region #EmptyDocumentCreated
         private void RichEditControl1_EmptyDocumentCreated(object sender, EventArgs e) {
-            richEditControl1.Document.DefaultCharacterProperties.ForeColor = Color.Red;
-            richEditControl1.Document.DefaultParagraphProperties.Alignment = DevExpress.XtraRichEdit.API.Native.ParagraphAlignment.Center;
-            richEditControl1.Document.AppendText("Document created at " + DateTime.Now.ToLongTimeString());
+            Document document = richEditControl1.Document;
+            document.DefaultCharacterProperties.ForeColor = Color.Red;
+            document.DefaultParagraphProperties.Alignment = ParagraphAlignment.Center;
+            document.AppendText("Document created at " + DateTime.Now.ToLongTimeString());
         }
-        #endregion #EmptyDocumentCreated
 
         private void RichEditControl1_DocumentClosing(object sender, CancelEventArgs e) {
             e.Cancel = (MessageBox.Show("Discard the document?", "RichEditControl.DocumentClosing", MessageBoxButtons.YesNo) == DialogResult.No);
         }
 
-
-        #region ButtonActions
-        private void barBtnShowMoreForm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+        private void barBtnShowMoreForm_ItemClick(object sender, ItemClickEventArgs e) {
             RichEditForm frm = new RichEditForm();
             frm.Show();
         }
 
-        private void barBtnLoadDoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+        private void barBtnLoadDoc_ItemClick(object sender, ItemClickEventArgs e) {
             foreach (var item in Application.OpenForms) {
                 XtraForm frm = item as XtraForm;
                 if (frm != null) {
@@ -53,9 +54,8 @@ namespace DefaultDocumentSettingsExample {
             }
         }
 
-        private void barBtnNewDoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+        private void barBtnNewDoc_ItemClick(object sender, ItemClickEventArgs e) {
             richEditControl1.CreateNewDocument(true);
         }
-        #endregion ButtonActions
     }
 }

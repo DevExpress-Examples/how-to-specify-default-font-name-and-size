@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation1 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
@@ -105,7 +106,7 @@
             this.fontRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.FontRibbonPageGroup();
             this.paragraphRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup();
             this.editingRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup();
-            this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
+            this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditFontSizeEdit1)).BeginInit();
@@ -114,7 +115,8 @@
             // 
             // stylesRibbonPageGroup1
             // 
-            this.stylesRibbonPageGroup1.Glyph = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup1.Glyph")));
+            this.stylesRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
+            this.stylesRibbonPageGroup1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup1.ImageOptions.Image")));
             this.stylesRibbonPageGroup1.ItemLinks.Add(this.galleryChangeStyleItem1);
             this.stylesRibbonPageGroup1.Name = "stylesRibbonPageGroup1";
             // 
@@ -126,22 +128,24 @@
             this.galleryChangeStyleItem1.Gallery.ColumnCount = 10;
             this.galleryChangeStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             galleryItemGroup1});
-            this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
+            this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(260, 177);
             this.galleryChangeStyleItem1.Id = 61;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
             // 
             // richEditControl1
             // 
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richEditControl1.Location = new System.Drawing.Point(0, 143);
+            this.richEditControl1.Location = new System.Drawing.Point(0, 308);
+            this.richEditControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(784, 418);
+            this.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.PlainText;
+            this.richEditControl1.Size = new System.Drawing.Size(1568, 771);
             this.richEditControl1.TabIndex = 0;
-            this.richEditControl1.Text = "richEditControl1";
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(120, 115, 120, 115);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -210,10 +214,13 @@
             this.replaceItem1,
             this.barBtnShowNewForm,
             this.barBtnLoadDoc,
-            this.barBtnNewDoc});
+            this.barBtnNewDoc,
+            this.ribbonControl1.SearchEditItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.ribbonControl1.MaxItemId = 67;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.OptionsMenuMinWidth = 1320;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.fileRibbonPage1,
             this.homeRibbonPage1});
@@ -221,7 +228,9 @@
             this.repositoryItemFontEdit1,
             this.repositoryItemRichEditFontSizeEdit1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl1.Size = new System.Drawing.Size(784, 143);
+            this.ribbonControl1.ShowSearchItem = false;
+            this.ribbonControl1.Size = new System.Drawing.Size(1568, 308);
+            this.ribbonControl1.Toolbar.MinWidth = -1;
             // 
             // undoItem1
             // 
@@ -291,10 +300,10 @@
             // barButtonGroup1
             // 
             this.barButtonGroup1.Id = 10;
-            this.barButtonGroup1.ItemLinks.Add(this.changeFontNameItem1);
+            this.barButtonGroup1.ItemLinks.Add(this.changeFontNameItem1, "FF");
             this.barButtonGroup1.ItemLinks.Add(this.changeFontSizeItem1);
-            this.barButtonGroup1.ItemLinks.Add(this.fontSizeIncreaseItem1);
-            this.barButtonGroup1.ItemLinks.Add(this.fontSizeDecreaseItem1);
+            this.barButtonGroup1.ItemLinks.Add(this.fontSizeIncreaseItem1, "FG");
+            this.barButtonGroup1.ItemLinks.Add(this.fontSizeDecreaseItem1, "FK");
             this.barButtonGroup1.Name = "barButtonGroup1";
             this.barButtonGroup1.Tag = "{97BBE334-159B-44d9-A168-0411957565E8}";
             // 
@@ -392,8 +401,8 @@
             // barButtonGroup3
             // 
             this.barButtonGroup3.Id = 12;
-            this.barButtonGroup3.ItemLinks.Add(this.changeFontColorItem1);
-            this.barButtonGroup3.ItemLinks.Add(this.changeFontBackColorItem1);
+            this.barButtonGroup3.ItemLinks.Add(this.changeFontColorItem1, "FC");
+            this.barButtonGroup3.ItemLinks.Add(this.changeFontBackColorItem1, "I");
             this.barButtonGroup3.Name = "barButtonGroup3";
             this.barButtonGroup3.Tag = "{DF8C5334-EDE3-47c9-A42C-FE9A9247E180}";
             // 
@@ -445,9 +454,9 @@
             // barButtonGroup4
             // 
             this.barButtonGroup4.Id = 13;
-            this.barButtonGroup4.ItemLinks.Add(this.toggleBulletedListItem1);
-            this.barButtonGroup4.ItemLinks.Add(this.toggleNumberingListItem1);
-            this.barButtonGroup4.ItemLinks.Add(this.toggleMultiLevelListItem1);
+            this.barButtonGroup4.ItemLinks.Add(this.toggleBulletedListItem1, "U");
+            this.barButtonGroup4.ItemLinks.Add(this.toggleNumberingListItem1, "N");
+            this.barButtonGroup4.ItemLinks.Add(this.toggleMultiLevelListItem1, "M");
             this.barButtonGroup4.Name = "barButtonGroup4";
             this.barButtonGroup4.Tag = "{0B3A7A43-3079-4ce0-83A8-3789F5F6DC9F}";
             // 
@@ -469,8 +478,8 @@
             // barButtonGroup5
             // 
             this.barButtonGroup5.Id = 14;
-            this.barButtonGroup5.ItemLinks.Add(this.decreaseIndentItem1);
-            this.barButtonGroup5.ItemLinks.Add(this.increaseIndentItem1);
+            this.barButtonGroup5.ItemLinks.Add(this.decreaseIndentItem1, "AO");
+            this.barButtonGroup5.ItemLinks.Add(this.increaseIndentItem1, "AI");
             this.barButtonGroup5.ItemLinks.Add(this.toggleShowWhitespaceItem1);
             this.barButtonGroup5.Name = "barButtonGroup5";
             this.barButtonGroup5.Tag = "{4747D5AB-2BEB-4ea6-9A1D-8E4FB36F1B40}";
@@ -493,10 +502,10 @@
             // barButtonGroup6
             // 
             this.barButtonGroup6.Id = 15;
-            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentLeftItem1);
-            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentCenterItem1);
-            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentRightItem1);
-            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentJustifyItem1);
+            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentLeftItem1, "AL");
+            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentCenterItem1, "AC");
+            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentRightItem1, "AR");
+            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentJustifyItem1, "AJ");
             this.barButtonGroup6.Name = "barButtonGroup6";
             this.barButtonGroup6.Tag = "{8E89E775-996E-49a0-AADA-DE338E34732E}";
             // 
@@ -523,8 +532,8 @@
             // barButtonGroup7
             // 
             this.barButtonGroup7.Id = 16;
-            this.barButtonGroup7.ItemLinks.Add(this.changeParagraphLineSpacingItem1);
-            this.barButtonGroup7.ItemLinks.Add(this.changeParagraphBackColorItem1);
+            this.barButtonGroup7.ItemLinks.Add(this.changeParagraphLineSpacingItem1, "K");
+            this.barButtonGroup7.ItemLinks.Add(this.changeParagraphBackColorItem1, "H");
             this.barButtonGroup7.Name = "barButtonGroup7";
             this.barButtonGroup7.Tag = "{9A8DEAD8-3890-4857-A395-EC625FD02217}";
             // 
@@ -536,7 +545,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.setSesquialteralParagraphSpacingItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setDoubleParagraphSpacingItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.showLineSpacingFormItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.addSpacingBeforeParagraphItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, this.addSpacingBeforeParagraphItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "B", ""),
             new DevExpress.XtraBars.LinkPersistInfo(this.removeSpacingBeforeParagraphItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.addSpacingAfterParagraphItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.removeSpacingAfterParagraphItem1)});
@@ -600,8 +609,8 @@
             // barBtnShowNewForm
             // 
             this.barBtnShowNewForm.Caption = "Show New Editor";
-            this.barBtnShowNewForm.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnShowNewForm.Glyph")));
             this.barBtnShowNewForm.Id = 64;
+            this.barBtnShowNewForm.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnShowNewForm.ImageOptions.SvgImage")));
             this.barBtnShowNewForm.Name = "barBtnShowNewForm";
             this.barBtnShowNewForm.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -610,8 +619,8 @@
             // barBtnLoadDoc
             // 
             this.barBtnLoadDoc.Caption = "Load Text Document (all forms)";
-            this.barBtnLoadDoc.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnLoadDoc.Glyph")));
             this.barBtnLoadDoc.Id = 65;
+            this.barBtnLoadDoc.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnLoadDoc.ImageOptions.SvgImage")));
             this.barBtnLoadDoc.Name = "barBtnLoadDoc";
             this.barBtnLoadDoc.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -620,8 +629,8 @@
             // barBtnNewDoc
             // 
             this.barBtnNewDoc.Caption = "New Document (this form)";
-            this.barBtnNewDoc.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnNewDoc.Glyph")));
             this.barBtnNewDoc.Id = 66;
+            this.barBtnNewDoc.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnNewDoc.ImageOptions.SvgImage")));
             this.barBtnNewDoc.Name = "barBtnNewDoc";
             this.barBtnNewDoc.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -636,14 +645,15 @@
             // 
             // commonRibbonPageGroup1
             // 
+            this.commonRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.commonRibbonPageGroup1.ItemLinks.Add(this.undoItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.redoItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileNewItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileOpenItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveAsItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileNewItem1, "N");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileOpenItem1, "O");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1, "S");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveAsItem1, "A");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.quickPrintItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1, "P");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.printPreviewItem1);
             this.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1";
             // 
@@ -665,7 +675,7 @@
             this.editingRibbonPageGroup1});
             this.homeRibbonPage1.Name = "homeRibbonPage1";
             reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
-            reduceOperation1.Group = this.stylesRibbonPageGroup1;
+            reduceOperation1.GroupName = null;
             reduceOperation1.ItemLinkIndex = 0;
             reduceOperation1.ItemLinksCount = 0;
             reduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
@@ -673,23 +683,26 @@
             // 
             // clipboardRibbonPageGroup1
             // 
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteItem1);
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.cutItem1);
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.copyItem1);
+            this.clipboardRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteItem1, "V");
+            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.cutItem1, "X");
+            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.copyItem1, "C");
             this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteSpecialItem1);
             this.clipboardRibbonPageGroup1.Name = "clipboardRibbonPageGroup1";
             // 
             // fontRibbonPageGroup1
             // 
+            this.fontRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
             this.fontRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup1);
             this.fontRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup2);
             this.fontRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup3);
             this.fontRibbonPageGroup1.ItemLinks.Add(this.changeTextCaseItem1);
-            this.fontRibbonPageGroup1.ItemLinks.Add(this.clearFormattingItem1);
+            this.fontRibbonPageGroup1.ItemLinks.Add(this.clearFormattingItem1, "E");
             this.fontRibbonPageGroup1.Name = "fontRibbonPageGroup1";
             // 
             // paragraphRibbonPageGroup1
             // 
+            this.paragraphRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
             this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup4);
             this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup5);
             this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup6);
@@ -698,8 +711,9 @@
             // 
             // editingRibbonPageGroup1
             // 
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.findItem1);
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.replaceItem1);
+            this.editingRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.editingRibbonPageGroup1.ItemLinks.Add(this.findItem1, "FD");
+            this.editingRibbonPageGroup1.ItemLinks.Add(this.replaceItem1, "R");
             this.editingRibbonPageGroup1.Name = "editingRibbonPageGroup1";
             // 
             // richEditBarController1
@@ -764,11 +778,12 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1568, 1079);
             this.Controls.Add(this.richEditControl1);
             this.Controls.Add(this.ribbonControl1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Default Document Settings Example";
