@@ -3,17 +3,31 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1398)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# How to Specify Default Document Formatting
+
+This example illustrates two methods to specify default document formatting. The project contains two RichEditControl instances that use different default formatting options.
+
+The main RichEditControl uses parameters specified by the [Document.DefaultCharacterProperties](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document.DefaultCharacterProperties) and [Document.DefaultParagraphProperties](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document.DefaultParagraphProperties) options in the [RichEditControl.DocumentLoaded](https://docs.devexpress.com/WindowsForms/DevExpress.XtraRichEdit.RichEditControl.DocumentLoaded) event handler.
+
+The **New Document** button executes the [CreateNewDocument](https://docs.devexpress.com/WindowsForms/DevExpress.XtraRichEdit.RichEditControl.CreateNewDocument(System.Boolean)) method that, in turn, raises the [EmptyDocumentCreated](https://docs.devexpress.com/WindowsForms/DevExpress.XtraRichEdit.RichEditControl.EmptyDocumentCreated) event. In the event handler, the document is generated with another set of default settings specified by the [Document.DefaultCharacterProperties](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document.DefaultCharacterProperties) and [Document.DefaultParagraphProperties](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document.DefaultParagraphProperties) properties.
+
+The **Show New Editor** button invokes the other RichEditControl instance that uses default settings specified by the [RichEditControlCompatibility.DefaultFontName](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontName) and [RichEditControlCompatibility.DefaultFontSize](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontSize) properties on application startup.
+
+>[!warning]
+> Starting with v19.2, the **RichEditControl** uses document themes to retrieve default document font information. As such, the **RichEditControlCompatibility.DefaultFontName** property will no longer affect the default document font.
+>
+> Set the [RichEditControlCompatibility.UseThemeFonts](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditControlCompatibility.UseThemeFonts) property to **false** when starting the application to restore the previous behavior in all instances of the RichEdit components. Set the [RichEditBehaviorOptions.UseThemeFonts](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditBehaviorOptions.UseThemeFonts) property to **false** before loading a new document to disable themes for a specific component.
+
+The **Load Text Document** button loads a document to both RichEditControl instances. As a result, the document has different format options in each instance.
+
+![result](./media/image.png)
+
+## Files to Look At
 
 * [Form1.cs](./CS/DefaultDocumentSettingsExample/Form1.cs) (VB: [Form1.vb](./VB/DefaultDocumentSettingsExample/Form1.vb))
 * [Program.cs](./CS/DefaultDocumentSettingsExample/Program.cs) (VB: [Program.vb](./VB/DefaultDocumentSettingsExample/Program.vb))
-<!-- default file list end -->
-# How to specify default document formatting
 
+## Documentation
 
-This example illustrates two methods to specify default document formatting.<br> 1. The <a href="http://help.devexpress.com/#CoreLibraries/DevExpressXtraRichEditRichEditControlCompatibility_DefaultFontSizetopic">RichEditControlCompatibility.DefaultFontSize</a>, <a href="http://help.devexpress.com/#CoreLibraries/DevExpressXtraRichEditRichEditControlCompatibility_DefaultFontNametopic">RichEditControlCompatibility.DefaultFontName</a> properties to specify default font settings for all RichEditControl  instances in the application.<br>2.  The <a href="http://help.devexpress.com/#CoreLibraries/DevExpressXtraRichEditAPINativeDocument_DefaultCharacterPropertiestopic">Document.DefaultCharacterProperties</a> and <a href="http://help.devexpress.com/#CoreLibraries/DevExpressXtraRichEditAPINativeDocument_DefaultParagraphPropertiestopic">Document.DefaultParagraphProperties</a> settings used in the <a href="http://help.devexpress.com/#WindowsForms/DevExpressXtraRichEditRichEditControl_EmptyDocumentCreatedtopic">RichEditControl.EmptyDocumentCreated</a> and <a href="http://help.devexpress.com/#WindowsForms/DevExpressXtraRichEditRichEditControl_DocumentLoadedtopic">RichEditControl.DocumentLoaded</a> event handlers to set default formatting for a document individually. 
-
-<br/>
-
-
+* [Text Formatting](https://docs.devexpress.com/WindowsForms/117433/controls-and-libraries/rich-text-editor/text-formatting)
