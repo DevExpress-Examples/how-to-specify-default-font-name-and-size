@@ -115,7 +115,6 @@
             '
             'stylesRibbonPageGroup1
             '
-            Me.stylesRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[True]
             Me.stylesRibbonPageGroup1.ImageOptions.Image = CType(resources.GetObject("stylesRibbonPageGroup1.ImageOptions.Image"), System.Drawing.Image)
             Me.stylesRibbonPageGroup1.ItemLinks.Add(Me.galleryChangeStyleItem1)
             Me.stylesRibbonPageGroup1.Name = "stylesRibbonPageGroup1"
@@ -144,7 +143,6 @@
             '
             'ribbonControl1
             '
-            Me.ribbonControl1.EmptyAreaImageOptions.ImagePadding = New System.Windows.Forms.Padding(60, 58, 60, 58)
             Me.ribbonControl1.ExpandCollapseItem.Id = 0
             Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.undoItem1, Me.redoItem1, Me.fileNewItem1, Me.fileOpenItem1, Me.fileSaveItem1, Me.fileSaveAsItem1, Me.quickPrintItem1, Me.printItem1, Me.printPreviewItem1, Me.pasteItem1, Me.cutItem1, Me.copyItem1, Me.pasteSpecialItem1, Me.barButtonGroup1, Me.changeFontNameItem1, Me.changeFontSizeItem1, Me.fontSizeIncreaseItem1, Me.fontSizeDecreaseItem1, Me.barButtonGroup2, Me.toggleFontBoldItem1, Me.toggleFontItalicItem1, Me.toggleFontUnderlineItem1, Me.toggleFontDoubleUnderlineItem1, Me.toggleFontStrikeoutItem1, Me.toggleFontDoubleStrikeoutItem1, Me.toggleFontSuperscriptItem1, Me.toggleFontSubscriptItem1, Me.barButtonGroup3, Me.changeFontColorItem1, Me.changeFontBackColorItem1, Me.changeTextCaseItem1, Me.makeTextUpperCaseItem1, Me.makeTextLowerCaseItem1, Me.capitalizeEachWordCaseItem1, Me.toggleTextCaseItem1, Me.clearFormattingItem1, Me.barButtonGroup4, Me.toggleBulletedListItem1, Me.toggleNumberingListItem1, Me.toggleMultiLevelListItem1, Me.barButtonGroup5, Me.decreaseIndentItem1, Me.increaseIndentItem1, Me.barButtonGroup6, Me.toggleParagraphAlignmentLeftItem1, Me.toggleParagraphAlignmentCenterItem1, Me.toggleParagraphAlignmentRightItem1, Me.toggleParagraphAlignmentJustifyItem1, Me.toggleShowWhitespaceItem1, Me.barButtonGroup7, Me.changeParagraphLineSpacingItem1, Me.setSingleParagraphSpacingItem1, Me.setSesquialteralParagraphSpacingItem1, Me.setDoubleParagraphSpacingItem1, Me.showLineSpacingFormItem1, Me.addSpacingBeforeParagraphItem1, Me.removeSpacingBeforeParagraphItem1, Me.addSpacingAfterParagraphItem1, Me.removeSpacingAfterParagraphItem1, Me.changeParagraphBackColorItem1, Me.galleryChangeStyleItem1, Me.findItem1, Me.replaceItem1, Me.barBtnShowNewForm, Me.barBtnLoadDoc, Me.barBtnNewDoc, Me.ribbonControl1.SearchEditItem})
             Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
@@ -157,7 +155,6 @@
             Me.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
             Me.ribbonControl1.ShowSearchItem = False
             Me.ribbonControl1.Size = New System.Drawing.Size(1568, 308)
-            Me.ribbonControl1.Toolbar.MinWidth = -1
             '
             'undoItem1
             '
@@ -553,7 +550,6 @@
             '
             'commonRibbonPageGroup1
             '
-            Me.commonRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
             Me.commonRibbonPageGroup1.ItemLinks.Add(Me.undoItem1)
             Me.commonRibbonPageGroup1.ItemLinks.Add(Me.redoItem1)
             Me.commonRibbonPageGroup1.ItemLinks.Add(Me.fileNewItem1, "N")
@@ -586,7 +582,6 @@
             '
             'clipboardRibbonPageGroup1
             '
-            Me.clipboardRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
             Me.clipboardRibbonPageGroup1.ItemLinks.Add(Me.pasteItem1, "V")
             Me.clipboardRibbonPageGroup1.ItemLinks.Add(Me.cutItem1, "X")
             Me.clipboardRibbonPageGroup1.ItemLinks.Add(Me.copyItem1, "C")
@@ -595,7 +590,6 @@
             '
             'fontRibbonPageGroup1
             '
-            Me.fontRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[True]
             Me.fontRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup1)
             Me.fontRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup2)
             Me.fontRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup3)
@@ -605,7 +599,6 @@
             '
             'paragraphRibbonPageGroup1
             '
-            Me.paragraphRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[True]
             Me.paragraphRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup4)
             Me.paragraphRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup5)
             Me.paragraphRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup6)
@@ -614,7 +607,6 @@
             '
             'editingRibbonPageGroup1
             '
-            Me.editingRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
             Me.editingRibbonPageGroup1.ItemLinks.Add(Me.findItem1, "FD")
             Me.editingRibbonPageGroup1.ItemLinks.Add(Me.replaceItem1, "R")
             Me.editingRibbonPageGroup1.Name = "editingRibbonPageGroup1"
