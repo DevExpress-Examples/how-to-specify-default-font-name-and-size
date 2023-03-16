@@ -11,7 +11,7 @@ Imports DevExpress.XtraEditors
 
 Namespace DefaultDocumentSettingsExample
     Partial Public Class RichEditForm
-        Inherits DevExpress.XtraEditors.XtraForm
+        Inherits DevExpress.XtraBars.Ribbon.RibbonForm
 
         Public Sub New()
             InitializeComponent()

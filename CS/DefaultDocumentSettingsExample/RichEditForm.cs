@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
 namespace DefaultDocumentSettingsExample {
-    public partial class RichEditForm : DevExpress.XtraEditors.XtraForm {
+    public partial class RichEditForm : DevExpress.XtraBars.Ribbon.RibbonForm
+    {
         public RichEditForm() {
             InitializeComponent();
         }

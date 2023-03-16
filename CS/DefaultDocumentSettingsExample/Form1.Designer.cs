@@ -24,10 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation1 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
-            this.stylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup();
             this.galleryChangeStyleItem1 = new DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem();
             this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -98,27 +97,15 @@
             this.barBtnShowNewForm = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnLoadDoc = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnNewDoc = new DevExpress.XtraBars.BarButtonItem();
-            this.fileRibbonPage1 = new DevExpress.XtraRichEdit.UI.FileRibbonPage();
-            this.commonRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.homeRibbonPage1 = new DevExpress.XtraRichEdit.UI.HomeRibbonPage();
-            this.clipboardRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup();
             this.fontRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.FontRibbonPageGroup();
-            this.paragraphRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup();
-            this.editingRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup();
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditFontSizeEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // stylesRibbonPageGroup1
-            // 
-            this.stylesRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
-            this.stylesRibbonPageGroup1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup1.ImageOptions.Image")));
-            this.stylesRibbonPageGroup1.ItemLinks.Add(this.galleryChangeStyleItem1);
-            this.stylesRibbonPageGroup1.Name = "stylesRibbonPageGroup1";
             // 
             // galleryChangeStyleItem1
             // 
@@ -135,20 +122,20 @@
             // richEditControl1
             // 
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richEditControl1.Location = new System.Drawing.Point(0, 308);
-            this.richEditControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richEditControl1.Location = new System.Drawing.Point(0, 188);
+            this.richEditControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
             this.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.PlainText;
-            this.richEditControl1.Size = new System.Drawing.Size(1568, 771);
+            this.richEditControl1.Size = new System.Drawing.Size(915, 503);
             this.richEditControl1.TabIndex = 0;
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(120, 115, 120, 115);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
+            this.ribbonControl1.SearchEditItem,
             this.undoItem1,
             this.redoItem1,
             this.fileNewItem1,
@@ -214,23 +201,19 @@
             this.replaceItem1,
             this.barBtnShowNewForm,
             this.barBtnLoadDoc,
-            this.barBtnNewDoc,
-            this.ribbonControl1.SearchEditItem});
+            this.barBtnNewDoc});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.ribbonControl1.MaxItemId = 67;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 1320;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.fileRibbonPage1,
             this.homeRibbonPage1});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemFontEdit1,
             this.repositoryItemRichEditFontSizeEdit1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl1.ShowSearchItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1568, 308);
-            this.ribbonControl1.Toolbar.MinWidth = -1;
+            this.ribbonControl1.Size = new System.Drawing.Size(915, 188);
             // 
             // undoItem1
             // 
@@ -636,27 +619,6 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barBtnNewDoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnNewDoc_ItemClick);
             // 
-            // fileRibbonPage1
-            // 
-            this.fileRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.commonRibbonPageGroup1,
-            this.ribbonPageGroup1});
-            this.fileRibbonPage1.Name = "fileRibbonPage1";
-            // 
-            // commonRibbonPageGroup1
-            // 
-            this.commonRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.undoItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.redoItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileNewItem1, "N");
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileOpenItem1, "O");
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1, "S");
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveAsItem1, "A");
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.quickPrintItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1, "P");
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.printPreviewItem1);
-            this.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1";
-            // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barBtnShowNewForm);
@@ -668,11 +630,8 @@
             // homeRibbonPage1
             // 
             this.homeRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.clipboardRibbonPageGroup1,
-            this.fontRibbonPageGroup1,
-            this.paragraphRibbonPageGroup1,
-            this.stylesRibbonPageGroup1,
-            this.editingRibbonPageGroup1});
+            this.ribbonPageGroup1,
+            this.fontRibbonPageGroup1});
             this.homeRibbonPage1.Name = "homeRibbonPage1";
             reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
             reduceOperation1.GroupName = null;
@@ -680,15 +639,6 @@
             reduceOperation1.ItemLinksCount = 0;
             reduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
             this.homeRibbonPage1.ReduceOperations.Add(reduceOperation1);
-            // 
-            // clipboardRibbonPageGroup1
-            // 
-            this.clipboardRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteItem1, "V");
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.cutItem1, "X");
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.copyItem1, "C");
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteSpecialItem1);
-            this.clipboardRibbonPageGroup1.Name = "clipboardRibbonPageGroup1";
             // 
             // fontRibbonPageGroup1
             // 
@@ -699,22 +649,6 @@
             this.fontRibbonPageGroup1.ItemLinks.Add(this.changeTextCaseItem1);
             this.fontRibbonPageGroup1.ItemLinks.Add(this.clearFormattingItem1, "E");
             this.fontRibbonPageGroup1.Name = "fontRibbonPageGroup1";
-            // 
-            // paragraphRibbonPageGroup1
-            // 
-            this.paragraphRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup4);
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup5);
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup6);
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup7);
-            this.paragraphRibbonPageGroup1.Name = "paragraphRibbonPageGroup1";
-            // 
-            // editingRibbonPageGroup1
-            // 
-            this.editingRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.findItem1, "FD");
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.replaceItem1, "R");
-            this.editingRibbonPageGroup1.Name = "editingRibbonPageGroup1";
             // 
             // richEditBarController1
             // 
@@ -778,12 +712,12 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1568, 1079);
+            this.ClientSize = new System.Drawing.Size(915, 691);
             this.Controls.Add(this.richEditControl1);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Default Document Settings Example";
@@ -865,14 +799,8 @@
         private DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem galleryChangeStyleItem1;
         private DevExpress.XtraRichEdit.UI.FindItem findItem1;
         private DevExpress.XtraRichEdit.UI.ReplaceItem replaceItem1;
-        private DevExpress.XtraRichEdit.UI.FileRibbonPage fileRibbonPage1;
-        private DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup commonRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.HomeRibbonPage homeRibbonPage1;
-        private DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup clipboardRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.FontRibbonPageGroup fontRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup paragraphRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup stylesRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup editingRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
         private DevExpress.XtraBars.BarButtonItem barBtnShowNewForm;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;

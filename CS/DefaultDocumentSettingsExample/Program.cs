@@ -14,9 +14,6 @@ namespace DefaultDocumentSettingsExample {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            DevExpress.XtraRichEdit.RichEditControlCompatibility.UseThemeFonts = false;
-            DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontSize = 8;
-            DevExpress.XtraRichEdit.RichEditControlCompatibility.DefaultFontName = "Tahoma";
             Application.Run(new Form1());
         }
     }

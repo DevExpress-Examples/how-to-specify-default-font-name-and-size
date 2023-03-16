@@ -24,10 +24,9 @@
         ''' </summary>
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
             Dim GalleryItemGroup1 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
             Dim ReduceOperation1 As DevExpress.XtraBars.Ribbon.ReduceOperation = New DevExpress.XtraBars.Ribbon.ReduceOperation()
-            Me.stylesRibbonPageGroup1 = New DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup()
             Me.galleryChangeStyleItem1 = New DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem()
             Me.richEditControl1 = New DevExpress.XtraRichEdit.RichEditControl()
             Me.ribbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
@@ -98,27 +97,15 @@
             Me.barBtnShowNewForm = New DevExpress.XtraBars.BarButtonItem()
             Me.barBtnLoadDoc = New DevExpress.XtraBars.BarButtonItem()
             Me.barBtnNewDoc = New DevExpress.XtraBars.BarButtonItem()
-            Me.fileRibbonPage1 = New DevExpress.XtraRichEdit.UI.FileRibbonPage()
-            Me.commonRibbonPageGroup1 = New DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup()
             Me.ribbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
             Me.homeRibbonPage1 = New DevExpress.XtraRichEdit.UI.HomeRibbonPage()
-            Me.clipboardRibbonPageGroup1 = New DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup()
             Me.fontRibbonPageGroup1 = New DevExpress.XtraRichEdit.UI.FontRibbonPageGroup()
-            Me.paragraphRibbonPageGroup1 = New DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup()
-            Me.editingRibbonPageGroup1 = New DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup()
             Me.richEditBarController1 = New DevExpress.XtraRichEdit.UI.RichEditBarController(Me.components)
             CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.repositoryItemFontEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.repositoryItemRichEditFontSizeEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.richEditBarController1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
-            '
-            'stylesRibbonPageGroup1
-            '
-            Me.stylesRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[True]
-            Me.stylesRibbonPageGroup1.ImageOptions.Image = CType(resources.GetObject("stylesRibbonPageGroup1.ImageOptions.Image"), System.Drawing.Image)
-            Me.stylesRibbonPageGroup1.ItemLinks.Add(Me.galleryChangeStyleItem1)
-            Me.stylesRibbonPageGroup1.Name = "stylesRibbonPageGroup1"
             '
             'galleryChangeStyleItem1
             '
@@ -134,30 +121,27 @@
             'richEditControl1
             '
             Me.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.richEditControl1.Location = New System.Drawing.Point(0, 308)
-            Me.richEditControl1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+            Me.richEditControl1.Location = New System.Drawing.Point(0, 188)
+            Me.richEditControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.richEditControl1.MenuManager = Me.ribbonControl1
             Me.richEditControl1.Name = "richEditControl1"
             Me.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.PlainText
-            Me.richEditControl1.Size = New System.Drawing.Size(1568, 771)
+            Me.richEditControl1.Size = New System.Drawing.Size(915, 503)
             Me.richEditControl1.TabIndex = 0
             '
             'ribbonControl1
             '
-            Me.ribbonControl1.EmptyAreaImageOptions.ImagePadding = New System.Windows.Forms.Padding(60, 58, 60, 58)
             Me.ribbonControl1.ExpandCollapseItem.Id = 0
-            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.undoItem1, Me.redoItem1, Me.fileNewItem1, Me.fileOpenItem1, Me.fileSaveItem1, Me.fileSaveAsItem1, Me.quickPrintItem1, Me.printItem1, Me.printPreviewItem1, Me.pasteItem1, Me.cutItem1, Me.copyItem1, Me.pasteSpecialItem1, Me.barButtonGroup1, Me.changeFontNameItem1, Me.changeFontSizeItem1, Me.fontSizeIncreaseItem1, Me.fontSizeDecreaseItem1, Me.barButtonGroup2, Me.toggleFontBoldItem1, Me.toggleFontItalicItem1, Me.toggleFontUnderlineItem1, Me.toggleFontDoubleUnderlineItem1, Me.toggleFontStrikeoutItem1, Me.toggleFontDoubleStrikeoutItem1, Me.toggleFontSuperscriptItem1, Me.toggleFontSubscriptItem1, Me.barButtonGroup3, Me.changeFontColorItem1, Me.changeFontBackColorItem1, Me.changeTextCaseItem1, Me.makeTextUpperCaseItem1, Me.makeTextLowerCaseItem1, Me.capitalizeEachWordCaseItem1, Me.toggleTextCaseItem1, Me.clearFormattingItem1, Me.barButtonGroup4, Me.toggleBulletedListItem1, Me.toggleNumberingListItem1, Me.toggleMultiLevelListItem1, Me.barButtonGroup5, Me.decreaseIndentItem1, Me.increaseIndentItem1, Me.barButtonGroup6, Me.toggleParagraphAlignmentLeftItem1, Me.toggleParagraphAlignmentCenterItem1, Me.toggleParagraphAlignmentRightItem1, Me.toggleParagraphAlignmentJustifyItem1, Me.toggleShowWhitespaceItem1, Me.barButtonGroup7, Me.changeParagraphLineSpacingItem1, Me.setSingleParagraphSpacingItem1, Me.setSesquialteralParagraphSpacingItem1, Me.setDoubleParagraphSpacingItem1, Me.showLineSpacingFormItem1, Me.addSpacingBeforeParagraphItem1, Me.removeSpacingBeforeParagraphItem1, Me.addSpacingAfterParagraphItem1, Me.removeSpacingAfterParagraphItem1, Me.changeParagraphBackColorItem1, Me.galleryChangeStyleItem1, Me.findItem1, Me.replaceItem1, Me.barBtnShowNewForm, Me.barBtnLoadDoc, Me.barBtnNewDoc, Me.ribbonControl1.SearchEditItem})
+            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.ribbonControl1.SearchEditItem, Me.undoItem1, Me.redoItem1, Me.fileNewItem1, Me.fileOpenItem1, Me.fileSaveItem1, Me.fileSaveAsItem1, Me.quickPrintItem1, Me.printItem1, Me.printPreviewItem1, Me.pasteItem1, Me.cutItem1, Me.copyItem1, Me.pasteSpecialItem1, Me.barButtonGroup1, Me.changeFontNameItem1, Me.changeFontSizeItem1, Me.fontSizeIncreaseItem1, Me.fontSizeDecreaseItem1, Me.barButtonGroup2, Me.toggleFontBoldItem1, Me.toggleFontItalicItem1, Me.toggleFontUnderlineItem1, Me.toggleFontDoubleUnderlineItem1, Me.toggleFontStrikeoutItem1, Me.toggleFontDoubleStrikeoutItem1, Me.toggleFontSuperscriptItem1, Me.toggleFontSubscriptItem1, Me.barButtonGroup3, Me.changeFontColorItem1, Me.changeFontBackColorItem1, Me.changeTextCaseItem1, Me.makeTextUpperCaseItem1, Me.makeTextLowerCaseItem1, Me.capitalizeEachWordCaseItem1, Me.toggleTextCaseItem1, Me.clearFormattingItem1, Me.barButtonGroup4, Me.toggleBulletedListItem1, Me.toggleNumberingListItem1, Me.toggleMultiLevelListItem1, Me.barButtonGroup5, Me.decreaseIndentItem1, Me.increaseIndentItem1, Me.barButtonGroup6, Me.toggleParagraphAlignmentLeftItem1, Me.toggleParagraphAlignmentCenterItem1, Me.toggleParagraphAlignmentRightItem1, Me.toggleParagraphAlignmentJustifyItem1, Me.toggleShowWhitespaceItem1, Me.barButtonGroup7, Me.changeParagraphLineSpacingItem1, Me.setSingleParagraphSpacingItem1, Me.setSesquialteralParagraphSpacingItem1, Me.setDoubleParagraphSpacingItem1, Me.showLineSpacingFormItem1, Me.addSpacingBeforeParagraphItem1, Me.removeSpacingBeforeParagraphItem1, Me.addSpacingAfterParagraphItem1, Me.removeSpacingAfterParagraphItem1, Me.changeParagraphBackColorItem1, Me.galleryChangeStyleItem1, Me.findItem1, Me.replaceItem1, Me.barBtnShowNewForm, Me.barBtnLoadDoc, Me.barBtnNewDoc})
             Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
-            Me.ribbonControl1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+            Me.ribbonControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.ribbonControl1.MaxItemId = 67
             Me.ribbonControl1.Name = "ribbonControl1"
             Me.ribbonControl1.OptionsMenuMinWidth = 660
-            Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.fileRibbonPage1, Me.homeRibbonPage1})
+            Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.homeRibbonPage1})
             Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.repositoryItemFontEdit1, Me.repositoryItemRichEditFontSizeEdit1})
             Me.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
-            Me.ribbonControl1.ShowSearchItem = False
-            Me.ribbonControl1.Size = New System.Drawing.Size(1568, 308)
-            Me.ribbonControl1.Toolbar.MinWidth = -1
+            Me.ribbonControl1.Size = New System.Drawing.Size(915, 188)
             '
             'undoItem1
             '
@@ -546,25 +530,6 @@
             Me.barBtnNewDoc.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
             '
-            'fileRibbonPage1
-            '
-            Me.fileRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.commonRibbonPageGroup1, Me.ribbonPageGroup1})
-            Me.fileRibbonPage1.Name = "fileRibbonPage1"
-            '
-            'commonRibbonPageGroup1
-            '
-            Me.commonRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
-            Me.commonRibbonPageGroup1.ItemLinks.Add(Me.undoItem1)
-            Me.commonRibbonPageGroup1.ItemLinks.Add(Me.redoItem1)
-            Me.commonRibbonPageGroup1.ItemLinks.Add(Me.fileNewItem1, "N")
-            Me.commonRibbonPageGroup1.ItemLinks.Add(Me.fileOpenItem1, "O")
-            Me.commonRibbonPageGroup1.ItemLinks.Add(Me.fileSaveItem1, "S")
-            Me.commonRibbonPageGroup1.ItemLinks.Add(Me.fileSaveAsItem1, "A")
-            Me.commonRibbonPageGroup1.ItemLinks.Add(Me.quickPrintItem1)
-            Me.commonRibbonPageGroup1.ItemLinks.Add(Me.printItem1, "P")
-            Me.commonRibbonPageGroup1.ItemLinks.Add(Me.printPreviewItem1)
-            Me.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1"
-            '
             'ribbonPageGroup1
             '
             Me.ribbonPageGroup1.ItemLinks.Add(Me.barBtnShowNewForm)
@@ -575,7 +540,7 @@
             '
             'homeRibbonPage1
             '
-            Me.homeRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.clipboardRibbonPageGroup1, Me.fontRibbonPageGroup1, Me.paragraphRibbonPageGroup1, Me.stylesRibbonPageGroup1, Me.editingRibbonPageGroup1})
+            Me.homeRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1, Me.fontRibbonPageGroup1})
             Me.homeRibbonPage1.Name = "homeRibbonPage1"
             ReduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable
             ReduceOperation1.GroupName = Nothing
@@ -583,15 +548,6 @@
             ReduceOperation1.ItemLinksCount = 0
             ReduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery
             Me.homeRibbonPage1.ReduceOperations.Add(ReduceOperation1)
-            '
-            'clipboardRibbonPageGroup1
-            '
-            Me.clipboardRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
-            Me.clipboardRibbonPageGroup1.ItemLinks.Add(Me.pasteItem1, "V")
-            Me.clipboardRibbonPageGroup1.ItemLinks.Add(Me.cutItem1, "X")
-            Me.clipboardRibbonPageGroup1.ItemLinks.Add(Me.copyItem1, "C")
-            Me.clipboardRibbonPageGroup1.ItemLinks.Add(Me.pasteSpecialItem1)
-            Me.clipboardRibbonPageGroup1.Name = "clipboardRibbonPageGroup1"
             '
             'fontRibbonPageGroup1
             '
@@ -602,22 +558,6 @@
             Me.fontRibbonPageGroup1.ItemLinks.Add(Me.changeTextCaseItem1)
             Me.fontRibbonPageGroup1.ItemLinks.Add(Me.clearFormattingItem1, "E")
             Me.fontRibbonPageGroup1.Name = "fontRibbonPageGroup1"
-            '
-            'paragraphRibbonPageGroup1
-            '
-            Me.paragraphRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[True]
-            Me.paragraphRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup4)
-            Me.paragraphRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup5)
-            Me.paragraphRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup6)
-            Me.paragraphRibbonPageGroup1.ItemLinks.Add(Me.barButtonGroup7)
-            Me.paragraphRibbonPageGroup1.Name = "paragraphRibbonPageGroup1"
-            '
-            'editingRibbonPageGroup1
-            '
-            Me.editingRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
-            Me.editingRibbonPageGroup1.ItemLinks.Add(Me.findItem1, "FD")
-            Me.editingRibbonPageGroup1.ItemLinks.Add(Me.replaceItem1, "R")
-            Me.editingRibbonPageGroup1.Name = "editingRibbonPageGroup1"
             '
             'richEditBarController1
             '
@@ -681,12 +621,12 @@
             '
             'Form1
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(1568, 1079)
+            Me.ClientSize = New System.Drawing.Size(915, 691)
             Me.Controls.Add(Me.richEditControl1)
             Me.Controls.Add(Me.ribbonControl1)
-            Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+            Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Name = "Form1"
             Me.Ribbon = Me.ribbonControl1
             Me.Text = "Default Document Settings Example"
@@ -768,14 +708,8 @@
         Private galleryChangeStyleItem1 As DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem
         Private findItem1 As DevExpress.XtraRichEdit.UI.FindItem
         Private replaceItem1 As DevExpress.XtraRichEdit.UI.ReplaceItem
-        Private fileRibbonPage1 As DevExpress.XtraRichEdit.UI.FileRibbonPage
-        Private commonRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup
         Private homeRibbonPage1 As DevExpress.XtraRichEdit.UI.HomeRibbonPage
-        Private clipboardRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup
         Private fontRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.FontRibbonPageGroup
-        Private paragraphRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup
-        Private stylesRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup
-        Private editingRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup
         Private richEditBarController1 As DevExpress.XtraRichEdit.UI.RichEditBarController
         Private WithEvents barBtnShowNewForm As DevExpress.XtraBars.BarButtonItem
         Private ribbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
